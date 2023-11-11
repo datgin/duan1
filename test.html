@@ -1,0 +1,27 @@
+<style>
+  .image {
+    display: none;
+  }
+</style>
+
+<div id="today2" onclick="showImage(2)">Today 2</div>
+<div id="today3" onclick="showImage(3)">Today 3</div>
+
+<div id="image1" class="image">Image 1</div>
+<div id="image2" class="image">Image 2</div>
+<div id="image3" class="image">Image 3</div>
+
+<script>
+  function showImage(imageNumber) {
+    var imageElements = document.getElementsByClassName("image");
+    for (var i = 0; i < imageElements.length; i++) {
+      imageElements[i].style.display = "none";
+    }
+    var imageElement = document.getElementById("image" + imageNumber);
+    if (imageElement) {
+      imageElement.style.display = "block";
+      
+    }
+    console.log(imageElement);
+  }
+</script>

@@ -95,25 +95,29 @@
   var days = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
   var months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
   var today = new Date();
-  var dateTime = "<span id='today'>Hôm nay<br>" + today.getDate() + " / " + months[today.getMonth()] + "</span>";
+  var dateTime = "<span onclick='show_lich("+ 1 +")' id='today'>Hôm nay<br>" + today.getDate() + " / " + months[today.getMonth()] + "</span>";
   for (var i = 1; i <= 6; i++) {
     var nextDay = new Date();
     nextDay.setDate(today.getDate() + i);
-    dateTime += "<span>" + days[nextDay.getDay()] + "<br>" + nextDay.getDate() + " / " + months[nextDay.getMonth()] + "</span>";
+    dateTime += "<span id='today"+ i+"' onclick='show_lich(" + (i+1) + ")'>" + days[nextDay.getDay()] + "<br>" + nextDay.getDate() + " / " + months[nextDay.getMonth()] + "</span>";
   }
   document.getElementById("datetime").innerHTML = dateTime;
 
   function setDefaultStyle() {
-    var a = 0;
     var spans = document.getElementsByTagName("span");
+
     for (var i = 0; i < spans.length; i++) {
       spans[i].classList.remove("active");
-      a = a + i;
     }
-    if (a == 0) {
-      document.getElementById("today").classList.add("active");
-    }
-    console.log(spans.length + "/" + a);
+    document.getElementById("today").classList.add("active");
+  }
+
+  var spans = document.getElementsByTagName("span");
+  for (var i = 0; i < spans.length; i++) {
+    spans[i].addEventListener("click", function() {
+      setDefaultStyle();
+      this.classList.add("active");
+    });
   }
   setDefaultStyle();
 
@@ -123,6 +127,20 @@
       setDefaultStyle();
       this.classList.add("active");
     });
+  }
+
+
+
+  function show_lich(lichNumber) {
+    var lichElements = document.getElementsByClassName("time-movie");
+    for (var i = 0; i < lichElements.length; i++) {
+      lichElements[i].style.display = "none";
+    }
+    var lichElement = document.getElementById("time-movie" + lichNumber);
+    if (lichElement) {
+      lichElement.style.display = "block";
+    }
+    console.log(lichElement);
   }
 </script>
 

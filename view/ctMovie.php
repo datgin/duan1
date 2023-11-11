@@ -32,9 +32,221 @@
                 <h6>Nội Dung Phim</h6>
                 <p>Thanathip quyết tâm điều tra vì sao bóng ma lại luôn theo sau mình tại dinh thự được truyền qua nhiều thế hệ. Câu trả lời sẽ có vào đêm trăng khuyết nhưng một sự cố xảy ra khiến con ma tức giận và giết hết tất cả.</p>
             </div>
-            <div class="lich-movie">
+            <div class="day-movie">
                 <h6>Lịch Chiếu</h6>
                 <p id="datetime"></p>
+            </div>
+            <div class="Movie">
+                <div id="time-movie1" class="time-movie">
+                    <div class="lich-movie">
+                        <p>Phòng 01</p>
+                        <span>19:30</span><span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 02</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 03</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 04</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 05</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 06</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 07</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                </div>
+                <div id="time-movie2" class="time-movie">
+                    <div class="lich-movie">
+                        <p>Phòng 01</p>
+                        <span>21:00</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 02</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 03</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 04</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 05</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 06</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 07</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                </div>
+                <div id="time-movie3" class="time-movie">
+                    <div class="lich-movie">
+                        <p>Phòng 01</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 02</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 03</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 04</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 05</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 06</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 07</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                </div>
+                <div id="time-movie4" class="time-movie">
+                    <div class="lich-movie">
+                        <p>Phòng 01</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 02</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 03</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 04</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 05</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 06</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 07</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                </div>
+                <div id="time-movie5" class="time-movie">
+                    <div class="lich-movie">
+                        <p>Phòng 01</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 02</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 03</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 04</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 05</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 06</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 07</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                </div>
+                <div id="time-movie6" class="time-movie">
+                    <div class="lich-movie">
+                        <p>Phòng 01</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 02</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 03</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 04</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 05</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 06</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 07</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                </div>
+                <div id="time-movie7" class="time-movie">
+                    <div class="lich-movie">
+                        <p>Phòng 01</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 02</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 03</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 04</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 05</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 06</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                    <div class="lich-movie">
+                        <p>Phòng 07</p>
+                        <span>21:30</span><span>17:30</span><span>19:30</span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="cung-muc">
