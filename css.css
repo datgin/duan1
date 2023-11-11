@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz@1,6..12&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -8,7 +9,7 @@
 }
 body {
   /* background-color: #000000; */
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 header {
@@ -315,7 +316,7 @@ header {
 .khoi {
   text-align: center;
 }
-.main .khoi1{
+.main .khoi1 {
   display: grid;
   gap: 25px;
   grid-template-columns: repeat(4, 1fr);
@@ -328,7 +329,8 @@ header {
 .button {
   text-align: center;
 }
-.button button {
+.button button,
+.ctMovie .cung-muc button {
   padding: 10px 40px;
   border: 1px solid rgb(255, 132, 0);
   color: rgb(255, 132, 0);
@@ -343,9 +345,11 @@ header {
   width: 1510px;
   margin-bottom: 40px;
 }
-.button button:hover {
-  background-color: rgba(255, 132, 0, 0.3);
+.button button:hover,
+.ctMovie .cung-muc button:hover {
+  background-color: rgb(255, 132, 0);
   transition: 0.3s;
+  color: white;
 }
 
 .main .khoi .item .image img {
@@ -430,6 +434,154 @@ header {
 .top-movie span small:nth-child(1) {
   font-size: 1.2vw;
   color: black;
+}
+.bg {
+  background: black;
+  text-align: center;
+}
+.bg .img {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  width: 750px;
+  height: 500px;
+  z-index: 0;
+}
+.bg .img img {
+  width: 100%;
+  height: 100%;
+}
+.bg .img::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  top: 0;
+}
+.bg .img a {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 5;
+}
+.bg .img a i {
+  font-size: 4vw;
+}
+.bg .img .bur-left {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.bg .img .bur-right {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.ctMovie {
+  width: 100%;
+  padding: 0 120px;
+  display: flex;
+  justify-content: space-between;
+}
+.ctMovie .box-noi-dung {
+  width: 73%;
+}
+.ctMovie .chi-tiet {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.ctMovie .chi-tiet .anh {
+  margin-top: -70px;
+  width: 30%;
+  height: 384px;
+}
+.ctMovie .noi-dung {
+  width: 70%;
+  line-height: 35px;
+}
+.ctMovie .noi-dung i {
+  color: rgb(255, 136, 0);
+  padding-right: 5px;
+}
+.ctMovie .noi-dung p:nth-child(1) {
+  font-size: 1.8vw;
+  font-weight: 700;
+  margin-top: 50px;
+  color: black;
+}
+.ctMovie .noi-dung p:nth-child(3) {
+  color: black;
+  font-size: 1.5vw;
+}
+.ctMovie .noi-dung p:nth-child(3) small {
+  font-size: 1vw;
+  color: rgb(141, 141, 141);
+}
+.ctMovie .noi-dung p span {
+  color: black;
+  margin-right: 4px;
+  padding: 4px 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(141, 141, 141);
+}
+.ctMovie .noi-dung p {
+  color: rgb(141, 141, 141);
+}
+.ctMovie .lich-movie p span {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.1vw;
+}
+#datetime span {
+  background-color: white;
+  color: black;
+  font-size: initial;
+  border-radius: 0;
+}
+#datetime span.active {
+  background-color: rgb(0, 0, 171);
+  color: white;
+  font-size: 1.2vw;
+  border-radius: 5px;
+}
+.ctMovie .noi-dung .fa-calendar {
+  padding-left: 10px;
+}
+.ctMovie .chi-tiet .anh img {
+  position: relative;
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.9) 0px 7px 29px 0px;
+}
+.ctMovie .cung-muc {
+  width: 25%;
+}
+.ctMovie h6 {
+  margin-top: 40px;
+  font-weight: bold;
+  border-left: 4px solid rgb(0, 0, 168);
+  padding-left: 5px;
+  margin-bottom: 30px;
+}
+.ctMovie .cung-muc p {
+  margin-bottom: 15px;
+  font-size: 1.2vw;
+}
+.ctMovie .cung-muc button {
+  float: right;
+}
+.ctMovie .cung-muc p img {
+  width: 334px;
+  height: 223px;
+  border-radius: 5px;
 }
 footer {
   margin-top: 100px;
