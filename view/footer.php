@@ -37,6 +37,32 @@
     $(".carousel").carousel();
   });
 
+
+  const signUpButton = document.getElementById("signUp");
+  const signInButton = document.getElementById("signIn");
+  const container = document.getElementById("container");
+
+  signUpButton.addEventListener("click", () => {
+    container.classList.add("right-panel-active");
+  });
+
+  signInButton.addEventListener("click", () => {
+    container.classList.remove("right-panel-active");
+  });
+
+
+  var close = document.querySelector(".close");
+  var login = document.querySelector(".login");
+  var box_acount = document.querySelector(".box-acount");
+  login.addEventListener("click", () => {
+    box_acount.classList.remove("active");
+    console.log(1);
+  })
+  close.addEventListener("click", () => {
+    box_acount.classList.add("active");
+    console.log(1);
+  });
+
   function toggleVideo() {
     const trailer = document.querySelector(".trailer");
     const video = trailer.querySelector("video");
@@ -95,39 +121,44 @@
   var days = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
   var months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
   var today = new Date();
-  var dateTime = "<span onclick='show_lich("+ 1 +")' id='today'>Hôm nay<br>" + today.getDate() + " / " + months[today.getMonth()] + "</span>";
+  var dateTime = "<span class='today active' id='today' onclick='show_lich(1)'>Hôm nay<br>" + today.getDate() + " / " + months[today.getMonth()] + "</span>";
   for (var i = 1; i <= 6; i++) {
     var nextDay = new Date();
     nextDay.setDate(today.getDate() + i);
-    dateTime += "<span id='today"+ i+"' onclick='show_lich(" + (i+1) + ")'>" + days[nextDay.getDay()] + "<br>" + nextDay.getDate() + " / " + months[nextDay.getMonth()] + "</span>";
+    dateTime += "<span class='today' id='today" + i + "' onclick='show_lich(" + (i + 1) + ")'>" + days[nextDay.getDay()] + "<br>" + nextDay.getDate() + " / " + months[nextDay.getMonth()] + "</span>";
   }
   document.getElementById("datetime").innerHTML = dateTime;
 
-  function setDefaultStyle() {
-    var spans = document.getElementsByTagName("span");
-
-    for (var i = 0; i < spans.length; i++) {
-      spans[i].classList.remove("active");
-    }
-    document.getElementById("today").classList.add("active");
-  }
-
   var spans = document.getElementsByTagName("span");
   for (var i = 0; i < spans.length; i++) {
     spans[i].addEventListener("click", function() {
-      setDefaultStyle();
+      for (var j = 0; j < spans.length; j++) {
+        spans[j].classList.remove("active");
+      }
       this.classList.add("active");
-    });
+    })
   }
-  setDefaultStyle();
 
-  var spans = document.getElementsByTagName("span");
-  for (var i = 0; i < spans.length; i++) {
-    spans[i].addEventListener("click", function() {
-      setDefaultStyle();
-      this.classList.add("active");
-    });
-  }
+  // function setDefaultStyle() {
+  //   var spans = document.getElementsByTagName("span");
+
+  //   for (var i = 0; i < spans.length; i++) {
+  //     spans[i].classList.remove("active");
+  //   }
+  //   document.getElementById("today").classList.add("active");
+  // }
+
+  // var spans = document.getElementsByTagName("span");
+  // for (var i = 0; i < spans.length; i++) {
+  //   spans[i].addEventListener("click", function() {
+  //     setDefaultStyle();
+  //     this.classList.add("active");
+  //   });
+  // }
+  // setDefaultStyle();
+
+
+
 
 
 
@@ -140,7 +171,6 @@
     if (lichElement) {
       lichElement.style.display = "block";
     }
-    console.log(lichElement);
   }
 </script>
 
