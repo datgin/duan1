@@ -1,15 +1,5 @@
 <div class="banner">
     <div class="content bg-01 active">
-        <!-- <img src="image/logo01.png" alt="" class="movie_title" />
-      <h4>
-        <span>2023</span><span><i>19+</i></span><span>12h 43min</span><span>Romance</span>
-      </h4>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-        necessitatibus placeat libero similique molestiae repellendus alias
-        eum facere natus impedit soluta quae quibusdam, iste et beatae,
-        commodi animi assumenda. Ipsum.
-      </p> -->
     </div>
     <?php
     foreach ($kq as $key => $value) {
@@ -20,9 +10,6 @@
     ?>
     <div class="carousel_box">
         <div class="carousel">
-            <!-- <div class="carousel-item" onclick="changeBg('bg-04.webp', 'bg-01', 'trailer01.mp4')">
-          <img src="image/avata_04.webp" alt="" />
-        </div> -->
             <?php
             foreach ($kq as $k) {
                 extract($k); ?>
@@ -86,7 +73,7 @@
             <?php }
             ?>
         </div>
-        
+
     </div>
     <div class="button">
         <button>Xem thêm <i class="fa-solid fa-angle-right"></i></button>
@@ -109,3 +96,53 @@
         </div>
     </div>
 </div>
+<div class="box-Notification active">
+    <div class="Notification">
+        <img src="image/avata_04.webp" alt="">
+    </div>
+    <img class="close closes" src="image/close.png" alt="" />
+</div>
+<script>
+    // hidden thống báo
+    const box_Notification = document.querySelector('.box-Notification');
+    const closes = document.querySelector('.closes');
+    closes.addEventListener('click', () => {
+        box_Notification.classList.remove('active');
+    });
+
+    // trailer
+    function toggleVideo() {
+        const trailer = document.querySelector(".trailer");
+        const video = trailer.querySelector("video");
+        video.pause();
+        trailer.classList.toggle("active");
+        video.play();
+        video.muted = true;
+    }
+
+    function changeBg(bg, title, trailer) {
+        const banner = document.querySelector(".banner");
+        const contents = banner.querySelectorAll(".content");
+        banner.style.background = `url("image/${bg}")`;
+        banner.style.backgroundSize = "cover";
+        banner.style.backgroundPosition = "center";
+
+        contents.forEach((content) => {
+            content.classList.remove("active");
+            if (content.classList.contains(title)) {
+                content.classList.add("active");
+            }
+        });
+
+        const video = document.querySelector(".trailer video");
+        video.src = `image/${trailer}`;
+        video.play();
+
+        const trailerContainer = document.querySelector(".trailer");
+        trailerContainer.classList.remove("active");
+        // Xóa dòng dưới để ngăn trailer đóng khi thay đổi hình ảnh
+        // trailerContainer.classList.add("active");
+    }
+    const watchTrailerButton = document.querySelector(".play");
+    watchTrailerButton.addEventListener("click", toggleVideo);
+</script>

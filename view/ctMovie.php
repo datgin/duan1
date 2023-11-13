@@ -260,3 +260,18 @@
         </div>
     </div>
 </main>
+<script>
+    function toggleVideo() {
+        const trailer = document.querySelector(".trailer");
+        const video = trailer.querySelector("video");
+        video.pause();
+        trailer.classList.toggle("active");
+        video.play();
+        video.muted = true;
+    }
+    const trailerContainer = document.querySelector(".trailer");
+    trailerContainer.classList.remove("active");
+
+    const watchTrailerButton = document.querySelector(".play");
+    watchTrailerButton.addEventListener("click", toggleVideo);
+</script>

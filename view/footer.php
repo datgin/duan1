@@ -38,86 +38,7 @@
   });
 
 
-  const signUpButton = document.getElementById("signUp");
-  const signInButton = document.getElementById("signIn");
-  const container = document.getElementById("container");
-
-  signUpButton.addEventListener("click", () => {
-    container.classList.add("right-panel-active");
-  });
-
-  signInButton.addEventListener("click", () => {
-    container.classList.remove("right-panel-active");
-  });
-
-
-  var close = document.querySelector(".close");
-  var login = document.querySelector(".login");
-  var box_acount = document.querySelector(".box-acount");
-  login.addEventListener("click", () => {
-    box_acount.classList.remove("active");
-    console.log(1);
-  })
-  close.addEventListener("click", () => {
-    box_acount.classList.add("active");
-    console.log(1);
-  });
-
-  function toggleVideo() {
-    const trailer = document.querySelector(".trailer");
-    const video = trailer.querySelector("video");
-    video.pause();
-    trailer.classList.toggle("active");
-    video.play();
-    video.muted = true;
-  }
-
-  function changeBg(bg, title, trailer) {
-    const banner = document.querySelector(".banner");
-    const contents = banner.querySelectorAll(".content");
-    banner.style.background = `url("image/${bg}")`;
-    banner.style.backgroundSize = "cover";
-    banner.style.backgroundPosition = "center";
-
-    contents.forEach((content) => {
-      content.classList.remove("active");
-      if (content.classList.contains(title)) {
-        content.classList.add("active");
-      }
-    });
-
-    const video = document.querySelector(".trailer video");
-    video.src = `image/${trailer}`;
-    video.play();
-
-    const trailerContainer = document.querySelector(".trailer");
-    trailerContainer.classList.remove("active");
-    // Xóa dòng dưới để ngăn trailer đóng khi thay đổi hình ảnh
-    // trailerContainer.classList.add("active");
-  }
-  const watchTrailerButton = document.querySelector(".play");
-  watchTrailerButton.addEventListener("click", toggleVideo);
-
-
-  function hiden() {
-    var hidden = document.querySelector(".khoi1");
-    var present = document.querySelector(".khoi2");
-    var presenty = document.querySelector(".presently");
-    var hiden = document.querySelector(".hidden");
-    if (hidden.style.display === "none") {
-      hidden.style.display = "grid";
-      present.style.display = "none";
-      hiden.style.color = "#ff3700";
-      presenty.style.color = "black";
-    } else {
-      hidden.style.display = "none";
-      present.style.display = "grid";
-      hiden.style.color = "black";
-      presenty.style.color = "#ff3700";
-    }
-  }
-
-
+  //show thứ
   var days = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
   var months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
   var today = new Date();
@@ -139,26 +60,27 @@
     })
   }
 
-  // function setDefaultStyle() {
-  //   var spans = document.getElementsByTagName("span");
-
-  //   for (var i = 0; i < spans.length; i++) {
-  //     spans[i].classList.remove("active");
-  //   }
-  //   document.getElementById("today").classList.add("active");
-  // }
-
-  // var spans = document.getElementsByTagName("span");
-  // for (var i = 0; i < spans.length; i++) {
-  //   spans[i].addEventListener("click", function() {
-  //     setDefaultStyle();
-  //     this.classList.add("active");
-  //   });
-  // }
-  // setDefaultStyle();
 
 
 
+
+  function hiden() {
+    var hidden = document.querySelector(".khoi1");
+    var present = document.querySelector(".khoi2");
+    var presenty = document.querySelector(".presently");
+    var hiden = document.querySelector(".hidden");
+    if (hidden.style.display === "none") {
+      hidden.style.display = "grid";
+      present.style.display = "none";
+      hiden.style.color = "#ff3700";
+      presenty.style.color = "black";
+    } else {
+      hidden.style.display = "none";
+      present.style.display = "grid";
+      hiden.style.color = "black";
+      presenty.style.color = "#ff3700";
+    }
+  }
 
 
 

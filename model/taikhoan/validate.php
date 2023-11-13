@@ -1,5 +1,5 @@
 <?php
-function validateDK($username, $password, $email, $enterpass, $tel)
+function validate($username, $password, $email, $enterpass)
 {
     $error = [];
     // Validate username
@@ -21,16 +21,10 @@ function validateDK($username, $password, $email, $enterpass, $tel)
     //Validate Email
     if (empty($email)) {
         $error["email"] = "Email không được để trống!";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    } elseif (!preg_match("/^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i", $email)) {
         $error["email"] = "Email không đúng định dạng!";
     }
 
-    //Validate tel
-    if (empty($tel)) {
-        $error["tel"] = "Số điện thoại không được để trống!";
-    } elseif (!preg_match("/^0[0-9]{9}$/", $tel)) {
-        $error["tel"] = "Số điện thoại không đúng định dạng!";
-    }
 
     if (empty($enterpass)) {
         $error["enterpass"] = "Mật khẩu không được để trống!";
@@ -41,10 +35,9 @@ function validateDK($username, $password, $email, $enterpass, $tel)
     return $error;
 }
 if (isset($_POST['btn']) && $_POST['btn']) {
-    if (isset($_POST['username']) && isset($_POST['enterpass']) && isset($_POST['tel'])) {
+    if (isset($_POST['username']) && isset($_POST['enterpass'])) {
         $username = $_POST['username'];
         $enterpass = $_POST['enterpass'];
-        $tel = $_POST['tel'];
     } else {
         $username = $enterpass = $tel = '';
     }
@@ -52,7 +45,7 @@ if (isset($_POST['btn']) && $_POST['btn']) {
     $email = $_POST['email'];
 
 
-    $error = validateDK($username, $password, $email, $enterpass, $tel);
+    $error = validate($username, $password, $email, $enterpass);
     if (empty($error)) {
         echo '<script>alert("Đăng ký thành công!")</script>';
     }

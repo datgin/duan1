@@ -1,3 +1,6 @@
+<?php
+include_once 'model/taikhoan/validate.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +16,7 @@
 
 <body>
   <header>
-    <a href="" class="logo"><i class="fa fa-home" aria-hidden="true"></i> iMovies</a>
+    <a href="index.php" class="logo"><i class="fa fa-home" aria-hidden="true"></i> iMovies</a>
     <ul class="nav">
       <li><a href="#">Home</a></li>
       <li><a href="#">Adults</a></li>
@@ -31,40 +34,46 @@
   <div class="box-acount active">
     <div class="form-acount" id="container">
       <div class="form-container sign-up-container">
-        <form action="#">
+        <form action="" method="post">
           <h1>Create Account</h1>
           <div class="click">
             <div class="input">
-              <input class="form-input" type="email" placeholder=" " />
+              <input class="form-input" type="email" placeholder=" " name="email" />
               <label for="">Email</label>
+              <span><?= (isset($error['email'])) ? $error['email'] : '' ?></span>
             </div>
             <div class="input">
-              <input class="form-input" type="text" placeholder=" " />
+              <input class="form-input" type="text" placeholder=" " name="username" />
               <label for="">Username</label>
+              <span><?= (isset($error['username'])) ? $error['username'] : '' ?></span>
             </div>
             <div class="input">
-              <input class="form-input" type="password" placeholder=" " /><label for="">Password</label>
+              <input class="form-input" type="password" placeholder=" " name="password" /><label for="">Password</label>
+              <span><?= (isset($error['password'])) ? $error['password'] : '' ?></span>
             </div>
             <div class="input">
-              <input class="form-input" type="password" placeholder=" " />
+              <input class="form-input" type="password" placeholder=" " name="enterpass" />
               <label for="">Enter-Pass</label>
+              <span><?= (isset($error['enterpass'])) ? $error['enterpass'] : '' ?></span>
             </div>
           </div>
 
-          <button>Sign Up</button>
+          <button name="btn" value="btn" type="submit">Sign Up</button>
         </form>
       </div>
 
       <div class="form-container sign-in-container">
-        <form action="#">
+        <form action="#" method="post">
           <h1>Sign in</h1>
           <div class="click">
             <div class="input">
-              <input class="form-input" type="email" placeholder=" " />
+              <input class="form-input" type="email" name="email" placeholder=" " />
               <label for="">Email</label>
+              <span><?= (isset($error['email'])) ? $error['email'] : '' ?></span>
             </div>
             <div class="input">
-              <input class="form-input" type="password" placeholder=" " /><label for="">Password</label>
+              <input class="form-input" type="password" placeholder=" " name="password" /><label for="">Password</label>
+              <span><?= (isset($error['password'])) ? $error['password'] : '' ?></span>
             </div>
           </div>
           <div class="check-box">
@@ -74,7 +83,7 @@
             <div class="right"><a href="#">Quên mật khẩu?</a></div>
           </div>
 
-          <button>Sign In</button>
+          <button name="btn" value="btn" type="submit">Sign In</button>
         </form>
       </div>
       <div class="overlay-container">
@@ -97,5 +106,30 @@
         </div>
       </div>
     </div>
-    <img class="close" src="image/close.png" alt=""/>
+    <img class="close" src="image/close.png" alt="" />
   </div>
+  <script>
+    //show acount
+  var close = document.querySelector(".close");
+  var login = document.querySelector(".login");
+  var box_acount = document.querySelector(".box-acount");
+  login.addEventListener("click", () => {
+    box_acount.classList.remove("active");
+  })
+  close.addEventListener("click", () => {
+    box_acount.classList.add("active");
+  });
+
+  // chuyển đăng ký đăng nhập
+  const signUpButton = document.getElementById("signUp");
+  const signInButton = document.getElementById("signIn");
+  const container = document.getElementById("container");
+
+  signUpButton.addEventListener("click", () => {
+    container.classList.add("right-panel-active");
+  });
+
+  signInButton.addEventListener("click", () => {
+    container.classList.remove("right-panel-active");
+  });
+  </script>
