@@ -82,7 +82,7 @@
     <div class="box-review">
         <h6 class="mb">GÓC REVIEW</h6>
         <div class="review">
-            <iframe width="850" height="415" src="https://www.youtube.com/embed/BbNFAWhKwSA?si=2YpMnKSxqaIQHebj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="900" height="540" src="https://www.youtube.com/embed/BbNFAWhKwSA?si=2YpMnKSxqaIQHebj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div class="top-movie">
                 <h5>TOP 8 MOVIE</h5>
                 <?php
