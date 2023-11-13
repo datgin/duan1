@@ -96,7 +96,7 @@
         </div>
     </div>
 </div>
-<div class="box-Notification active">
+<div class="box-Notification">
     <div class="Notification">
         <img src="image/avata_04.webp" alt="">
     </div>
