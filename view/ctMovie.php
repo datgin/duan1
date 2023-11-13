@@ -253,9 +253,9 @@
             <h6>
                 PHIM ĐANG CHIẾU
             </h6>
-            <p><img src="image/banner-04.webp" alt="">Biệt Đội Marvels</p>
-            <p><img src="image/banner-04.webp" alt="">Biệt Đội Marvels</p>
-            <p><img src="image/banner-04.webp" alt="">Biệt Đội Marvels</p>
+            <p><img src="image/banner-04.webp" alt=""><br>Biệt Đội Marvels</p>
+            <p><img src="image/banner-04.webp" alt=""><br>Biệt Đội Marvels</p>
+            <p><img src="image/banner-04.webp" alt=""><br>Biệt Đội Marvels</p>
             <button>Xem Thêm <i class="fa-solid fa-angle-right"></i></button>
         </div>
     </div>
