@@ -6,6 +6,8 @@
             <h6 class="m-0 font-weight-bold fs-5 text-secondary">Danh sách danh mục</h6>
         </div>
         <div class="card-body">
+        <a class="btn btn-success" type="submit" href="?act=add_dm">Thêm sản phẩm</a>
+
             <div class="table-responsive">
                 <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
                     <thead>

@@ -27,7 +27,9 @@
                 </div>
 
                 <div class="col-12">
-                    <button class="btn btn-success " type="submit">Thực hiện</button>
+                    <button class="btn btn-success " type="submit" name="submit">Thực hiện</button>
+                    <button type="reset" class="btn btn-outline-secondary">Nhập lại</button>
+                    <a class="btn btn-primary" href="?act=list_dm" type="submit">Danh sách danh mục</a>              
                 </div>
             </form>
         </div>
