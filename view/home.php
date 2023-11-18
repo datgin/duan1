@@ -1,148 +1,166 @@
-<div class="banner">
-    <div class="content bg-01 active">
+<section class="mb">
+    <div class="banner">
+        <img src="image/bg-04.webp" alt="" />
     </div>
-    <?php
-    foreach ($kq as $key => $value) {
-        extract($value); ?>
-        <div class="content <?= $tilte ?>">
+    <h2 class="mt-3">Thương Hiệu Nổi Bật</h2>
+    <div class="trademark">
+        <?php
+        foreach ($list_dm as $value) {
+            extract($value);
+        ?>
+            <p><img class="firm" src="uploads/img_dm/<?= $img ?>" alt="" /></p>
+        <?php
+        }
+        ?>
+    </div>
+</section>
+<aside>
+    <div class="right-now">
+        <img width="680" src="image/banner-bst.png" alt="" />
+        <button>Right now</button>
+    </div>
+    <div class="right-now">
+        <img width="680" src="image/banner-bst.png" alt="" />
+        <button>Right now</button>
+    </div>
+</aside>
+<main>
+    <div class="box-product">
+        <div class="title">
+            <h5>Đang khuyến mại</h5>
+            <p>Nam</p>
+            <p>Nữ</p>
         </div>
-    <?php }
-    ?>
-    <div class="carousel_box">
-        <div class="carousel">
+        <div class="block mt">
             <?php
-            foreach ($kq as $k) {
-                extract($k); ?>
-                <div class="carousel-item" onclick="changeBg('<?= $bg ?>', '<?= $tilte ?>', '<?= $trailer ?>')">
-                    <img src="image/<?= $image ?>" alt="" />
+            foreach ($list_sp_home as $value) {
+                extract($value); ?>
+                <div class="item">
+                    <div class="name"><?= $name ?></div>
+                    <div class="img">
+                        <p>
+                            <img src="image/dong-ho-citizen-em1074-82d_1680330969 1.png" alt="" />
+                        </p>
+                    </div>
+                    <div class="price">
+                        <span><?= number_format($gia) ?> VND</span><span><?= number_format($gia_new) ?> VND</span>
+                    </div>
+                    <div class="Evaluate">
+                        <p>
+                            <i class="fa-solid fa-star"></i> <span>(4.5)</span> <br />
+                            <span>Đã mua 4.5k</span>
+                        </p>
+                        <p><i class="fa-solid fa-cart-plus"></i></p>
+                    </div>
                 </div>
             <?php }
             ?>
 
         </div>
+        <button class="more">Xem thêm</button>
     </div>
-    <a href="#" class="play"><i class="fa fa-play-circle"></i>Watch Trailer</a>
-    <ul class="sci">
-        <li>
-            <a href=""><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-        </li>
-        <li>
-            <a href=""><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-        </li>
-        <li>
-            <a href=""><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
-        </li>
-    </ul>
-</div>
-<div class="trailer">
-    <video controls autoplay muted>
-        <source src="image/trailer-04.mp4">
-    </video>
-    <img class="close" src="image/close.png" alt="" onClick="toggleVideo()" />
-</div>
-<div class="main">
-    <div class="box-mat">
-        <h6>PHIM</h6>
-        <ul>
-            <li class="hidden" onclick="hiden()">Đang chiếu</li>
-            <li class="presently" onclick="hiden()">Sắp chiếu</li>
-        </ul>
-    </div>
-    <div class="khoi">
-        <div class="khoi1">
-            <?php
-            foreach ($kq2 as $k2) { ?>
-                <a href="?act=ctMovie&idmovie=<?= $k2['id'] ?>">
-                    <div class="item">
-                        <div class="image"><img src="image/<?= $k2['image'] ?>" alt="" /></div>
-                        <div class="name"><?= $k2['name'] ?></div>
-                    </div>
-                </a>
-            <?php }
-            ?>
+    <div class="box-product">
+        <div class="title">
+            <h5>Hàng bán chạy</h5>
         </div>
-        <div class="khoi2">
-            <?php
-            foreach ($kq1 as $k1) { ?>
-                <a href="?act=ctMovie&idmovie=<?= $k1['id'] ?>">
-                    <div class="item">
-                        <div class="image"><img src="image/<?= $k1['image'] ?>" alt="" /></div>
-                        <div class="name"><?= $k1['name'] ?></div>
-                    </div>
-                </a>
-            <?php }
-            ?>
+        <div class="block mt">
+            <div class="item">
+                <div class="name">Biệt đội Marvel</div>
+                <div class="img">
+                    <p>
+                        <img src="image/dong-ho-citizen-em1074-82d_1680330969 1.png" alt="" />
+                    </p>
+                </div>
+                <div class="price">
+                    <span>1.000.000 VND</span><span>500.000 VND</span>
+                </div>
+                <div class="Evaluate">
+                    <p>
+                        <i class="fa-solid fa-star"></i> <span>(4.5)</span> <br />
+                        <span>Đã mua 4.5k</span>
+                    </p>
+                    <p><i class="fa-solid fa-cart-plus"></i></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="name">Biệt đội Marvel</div>
+                <div class="img">
+                    <p>
+                        <img src="image/dong-ho-citizen-em1074-82d_1680330969 1.png" alt="" />
+                    </p>
+                </div>
+                <div class="price">
+                    <span>1.000.000 VND</span><span>500.000 VND</span>
+                </div>
+                <div class="Evaluate">
+                    <p>
+                        <i class="fa-solid fa-star"></i> <span>(4.5)</span> <br />
+                        <span>Đã mua 4.5k</span>
+                    </p>
+                    <p><i class="fa-solid fa-cart-plus"></i></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="name">Biệt đội Marvel</div>
+                <div class="img">
+                    <p>
+                        <img src="image/dong-ho-citizen-em1074-82d_1680330969 1.png" alt="" />
+                    </p>
+                </div>
+                <div class="price">
+                    <span>1.000.000 VND</span><span>500.000 VND</span>
+                </div>
+                <div class="Evaluate">
+                    <p>
+                        <i class="fa-solid fa-star"></i> <span>(4.5)</span> <br />
+                        <span>Đã mua 4.5k</span>
+                    </p>
+                    <p><i class="fa-solid fa-cart-plus"></i></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="name">Biệt đội Marvel</div>
+                <div class="img">
+                    <p>
+                        <img src="image/dong-ho-citizen-em1074-82d_1680330969 1.png" alt="" />
+                    </p>
+                </div>
+                <div class="price">
+                    <span>1.000.000 VND</span><span>500.000 VND</span>
+                </div>
+                <div class="Evaluate">
+                    <p>
+                        <i class="fa-solid fa-star"></i> <span>(4.5)</span> <br />
+                        <span>Đã mua 4.5k</span>
+                    </p>
+                    <p><i class="fa-solid fa-cart-plus"></i></p>
+                </div>
+            </div>
         </div>
-
+        <button class="more">Xem thêm</button>
     </div>
-    <div class="button">
-        <button>Xem thêm <i class="fa-solid fa-angle-right"></i></button>
-    </div>
-    <hr class="hr-main">
-    <div class="box-review">
-        <h6 class="mb">GÓC REVIEW</h6>
-        <div class="review">
-            <iframe width="900" height="540" src="https://www.youtube.com/embed/BbNFAWhKwSA?si=2YpMnKSxqaIQHebj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <div class="top-movie">
-                <h5>TOP 8 MOVIE</h5>
-                <?php
-                foreach ($kq3 as $k3) {
-                    extract($k3); ?>
-                    <p> <img src="image/<?= $image ?>" alt=""> <span><small><?= $name ?></small><small><i style="color: orange" class="fa fa-star"></i> 4.5 <i><?= $max_old ?>+</i></small><small><?= $year . ' | ' . $show_time . ' | ' .  $category ?></small></span></p>
-                <?php }
-                ?>
-                <p></p>
+    <div class="box-product">
+        <div class="title">
+            <h5>Review & Bài viết</h5>
+        </div>
+        <div class="block mt">
+            <div class="video-review">
+                <iframe width="700" height="395" src="https://www.youtube.com/embed/zlhVtQrmZW8?si=WY8Yg1yIdsgAkL3F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="box-posts">
+                <div class="post">
+                    <img src="image/avata_04.webp" alt="" />
+                    <p>Những xu hướng đồng hồ nữ hot nhất năm nay</p>
+                </div>
+                <div class="post">
+                    <img src="image/avata_04.webp" alt="" />
+                    <p>Những xu hướng đồng hồ nữ hot nhất năm nay</p>
+                </div>
+                <div class="post">
+                    <img src="image/avata_04.webp" alt="" />
+                    <p>Đồng hồ thông minh và ứng dụng không ngừng mở rộng của</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="box-Notification">
-    <div class="Notification">
-        <img src="image/avata_04.webp" alt="">
-    </div>
-    <img class="close closes" src="image/close.png" alt="" />
-</div>
-<script>
-    // hidden thống báo
-    const box_Notification = document.querySelector('.box-Notification');
-    const closes = document.querySelector('.closes');
-    closes.addEventListener('click', () => {
-        box_Notification.classList.remove('active');
-    });
-
-    // trailer
-    function toggleVideo() {
-        const trailer = document.querySelector(".trailer");
-        const video = trailer.querySelector("video");
-        video.pause();
-        trailer.classList.toggle("active");
-        video.play();
-        video.muted = true;
-    }
-
-    function changeBg(bg, title, trailer) {
-        const banner = document.querySelector(".banner");
-        const contents = banner.querySelectorAll(".content");
-        banner.style.background = `url("image/${bg}")`;
-        banner.style.backgroundSize = "cover";
-        banner.style.backgroundPosition = "center";
-
-        contents.forEach((content) => {
-            content.classList.remove("active");
-            if (content.classList.contains(title)) {
-                content.classList.add("active");
-            }
-        });
-
-        const video = document.querySelector(".trailer video");
-        video.src = `image/${trailer}`;
-        video.play();
-
-        const trailerContainer = document.querySelector(".trailer");
-        trailerContainer.classList.remove("active");
-        // Xóa dòng dưới để ngăn trailer đóng khi thay đổi hình ảnh
-        // trailerContainer.classList.add("active");
-    }
-    const watchTrailerButton = document.querySelector(".play");
-    watchTrailerButton.addEventListener("click", toggleVideo);
-</script>
+</main>
